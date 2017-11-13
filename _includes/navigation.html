@@ -1,14 +1,7 @@
 <ul class="nav">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="page1.html">Link1</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="page2.html">Link2</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#page3.html">Link3</a>
-  </li>
+  {% for page in site.pages %}
+    <li class="nav-item">
+      <a class="nav-link" href="{{page.url}}">{{page.title}}</a>
+    </li>
+  {% endfor %}
 </ul>
